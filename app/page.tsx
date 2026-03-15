@@ -14,10 +14,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-mono dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-4xl flex-col items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <h1 id="title" className="text-4xl font-bold hidden">Alícia Foureaux</h1>
-        <p id="subtitle" className="text-2xl hidden">Senior Software Engineer Contractor</p>
+    <div className="flex min-h-screen items-center justify-center font-mono">
+      <main className="flex min-h-screen w-full max-w-4xl flex-col items-left py-16 px-6 md:py-32 md:px-16 bg-white dark:bg-black sm:items-start">
+        <h1 id="title" className="text-xl md:text-4xl font-bold hidden">Alícia Foureaux</h1>
+        <p id="subtitle" className="text-base md:text-2xl hidden break-normal">Senior Software Engineer Contractor</p>
 
         {finishedTitleAnimation && (
           <main>
@@ -27,10 +27,10 @@ export default function Home() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 onAnimationComplete={() => typewriteContent("skills", SKILLS)}
-                className="text-2xl mt-4">
+                className="text-base md:text-2xl mt-4">
                   Skills:
               </motion.p>
-              <p id="skills" className="font-bold w-fit text-2xl"></p>
+              <p id="skills" className="font-bold w-fit text-base md:text-2xl"></p>
             </div>
 
             <motion.section
@@ -38,8 +38,8 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}
               className="mt-8">
-                <h1 className="text-xl font-bold">Table of contents:</h1>
-                <ul className="text-xl ml-12 mt-2 space-y-2">
+                <h1 className="text-base md:text-xl font-bold">Table of contents:</h1>
+                <ul className="text-base md:text-xl ml-12 mt-2 space-y-2">
                   <li>L  <a href="#whoAmI" className="underline">Who am I?</a></li>
                   <li>L <a href="#workExperience" className="underline">Work Experience</a></li>
                   <li>L <a href="#projects" className="underline">Personal Projects</a></li>
@@ -54,8 +54,8 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}
               className="mt-8">
-                <h1 className="text-2xl font-bold">Who am I?</h1>
-                <ul className="text-xl ml-12 mt-2 space-y-2">
+                <h1 className="text-xl md:text-2xl font-bold">Who am I?</h1>
+                <ul className="text-base md:text-xl ml-12 mt-2 space-y-2">
                   <li>L Over 5 years of experience building software</li>
                   <li>L Thrive at solving problems, no matter the tools</li>
                   <li>L Leadership focused on leading, not bossing</li>
@@ -70,8 +70,8 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.6, ease: "easeInOut" }}
               className="mt-8">
-                <h1 className="text-2xl font-bold">Work Experience</h1>
-                <ul className="text-xl ml-12 mt-2 space-y-8">
+                <h1 className="text-xl md:text-2xl font-bold">Work Experience</h1>
+                <ul className="text-base md:text-xl ml-12 mt-2 space-y-8">
                   <li className="space-x-3 flex flex-row gap-3 items-start">
                     L
                     <div>
@@ -132,8 +132,8 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}
               className="mt-8">
-                <h1 className="text-2xl font-bold">Personal Projects</h1>
-                <ul className="text-xl ml-12 mt-2 space-y-8">
+                <h1 className="text-xl md:text-2xl font-bold">Personal Projects</h1>
+                <ul className="text-base md:text-xl ml-12 mt-2 space-y-8">
                   <li className="space-x-3 flex flex-row gap-3 items-start">
                     L 
                     <div>
@@ -163,9 +163,9 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}
               className="mt-8">
-                <h1 className="text-2xl font-bold">Where to find me</h1>
+                <h1 className="text-xl md:text-2xl font-bold">Where to find me</h1>
                 <p>Need to build web apps, mobile apps or have an interesting opportunity? Contact me:</p>
-                <ul className="text-xl ml-12 mt-2 space-y-2">
+                <ul className="text-base md:text-xl ml-12 mt-2 space-y-2">
                   <li>L <a href="https://www.linkedin.com/in/aliciafoureaux/" target="_blank" className="underline">LinkedIn</a></li>
                   <li>L <a href="https://github.com/allyfx" target="_blank" className="underline">GitHub</a></li>
                   <li>L Email: ally@foureauxcode.com</li>
