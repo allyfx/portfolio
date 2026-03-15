@@ -14,8 +14,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="flex min-h-screen items-center justify-center font-mono bg-background">
-      <main className="flex min-h-screen w-full max-w-4xl flex-col items-left py-16 px-6 md:py-32 md:px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex min-h-screen items-center justify-center font-mono">
+      <main className="flex min-h-screen w-full max-w-4xl flex-col items-left py-16 px-6 md:py-32 md:px-16 sm:items-start">
         <h1 id="title" className="text-xl md:text-4xl font-bold hidden">Alícia Foureaux</h1>
         <p id="subtitle" className="text-base md:text-2xl hidden break-normal">Senior Software Engineer Contractor</p>
 
