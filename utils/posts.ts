@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
 
 export interface PostMetadata {
   id: string
@@ -8,6 +10,10 @@ export interface PostMetadata {
   date: string
   category: string
   short: string
+}
+
+export interface PostData extends PostMetadata {
+  contentHtml: string
 }
  
 const postsDirectory = path.join(process.cwd(), 'posts');
@@ -34,5 +40,30 @@ export function getSortedPostsData() {
     } else {
       return -1;
     }
-  }).filter((post) => post.title === '-'); // Gambiarra, remover depois que adicionar o primeiro post
+  }).filter(post => post.title === "-"); // Gambiarra, remover depois que adicionar o primeiro post
+}
+
+export async function getPostData(id: string) {
+  try {
+    const fullPath = path.join(postsDirectory, `${id}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+  
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents);
+  
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+    const contentHtml = processedContent.toString();
+  
+    // Combine the data with the id and contentHtml
+    return {
+      id,
+      contentHtml,
+      ...matterResult.data,
+    } as PostData;
+  } catch(err) {
+    return null
+  }
 }

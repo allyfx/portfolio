@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react"
 import { PostMetadata } from "@/utils/posts"
 import { typewriteText } from "@/utils/typewrite-text";
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   posts: PostMetadata[]
@@ -12,6 +13,11 @@ interface Props {
 export function BlogPosts({ posts }: Props) {
   const [finishedTitleAnimation, setFinishedTitleAnimation] = useState(false);
   const [search, setSearch] = useState('');
+  const router = useRouter()
+
+  function navigateToPost(id: string) {
+    router.push(`/blog/${id}`)
+  }
 
   const filteredPosts = useMemo(() => {
     if (!search) {
@@ -64,7 +70,8 @@ export function BlogPosts({ posts }: Props) {
                 {filteredPosts.map(post => ( 
                   <section
                     key={post.id}
-                    className="mt-2">
+                    className="mt-2"
+                    onClick={() => navigateToPost(post.id)}>
                       <li className="space-x-3 flex flex-row gap-3 items-start">
                         L
                         <div className="hover:border-amber-50 border-2 border-transparent rounded-md p-2 cursor-pointer">
