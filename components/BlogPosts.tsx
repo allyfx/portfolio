@@ -40,14 +40,19 @@ export function BlogPosts({ posts }: Props) {
               className="text-lg md:text-2xl break-normal mt-3">
               Sharing stories, learnings and experiences that I gained throughout my career.
             </motion.p>
-
-            <input
-              type="text"
-              placeholder="What do you wanna read about?"
-              className="border-2 border-amber-50 py-2 px-1 pl-4 rounded-md mt-8 w-full"
-              onChange={(e) => setSearch(e.currentTarget.value)}
-              value={search}
-            />
+            
+            <motion.section
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}>
+              <input
+                type="text"
+                placeholder="What do you wanna read about?"
+                className="border-2 border-amber-50 py-2 px-1 pl-4 rounded-md mt-8 w-full"
+                onChange={(e) => setSearch(e.currentTarget.value)}
+                value={search}
+              />
+            </motion.section>
 
             <motion.section
               initial={{ y: 10, opacity: 0 }}

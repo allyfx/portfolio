@@ -34,5 +34,5 @@ export function getSortedPostsData() {
     } else {
       return -1;
     }
-  });
+  }).filter((post) => post.title === '-'); // Gambiarra, remover depois que adicionar o primeiro post
 }
