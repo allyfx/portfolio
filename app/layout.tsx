@@ -13,8 +13,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alícia Foureaux | Potfólio",
-  description: "Senior Software Engineer Contractor, building amazing products that solves your problems.",
+  title: "Alicia Foureaux | Tech Lead",
+  description: "Tech Lead and Senior Software Engineer especialized in solving problems.",
 };
 
 export default function RootLayout({
