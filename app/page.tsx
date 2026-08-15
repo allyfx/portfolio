@@ -17,7 +17,13 @@ export default function Home() {
     <div className="flex min-h-screen items-center justify-center font-mono">
       <main className="flex min-h-screen w-full max-w-4xl flex-col items-left py-16 px-6 md:py-32 md:px-16 sm:items-start">
         <h1 id="title" className="text-xl md:text-4xl font-bold hidden">Alícia Foureaux</h1>
-        <p id="subtitle" className="text-base md:text-2xl hidden break-normal">Senior Software Engineer Contractor</p>
+        <motion.p
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}>
+          You can call me <strong>Ally!</strong>
+        </motion.p>
+        <p id="subtitle" className="text-base md:text-2xl hidden break-normal">Tech Lead | Senior Software Engineer</p>
 
         {finishedTitleAnimation && (
           <main>
@@ -164,7 +170,7 @@ export default function Home() {
               transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}
               className="mt-8">
                 <h1 className="text-xl md:text-2xl font-bold">Where to find me</h1>
-                <p>Need to build web apps, mobile apps or have an interesting opportunity? Contact me:</p>
+                <p>Want to partner on a project? Just wanna chat? Contact me:</p>
                 <ul className="text-base md:text-xl ml-12 mt-2 space-y-2">
                   <li>L <a href="https://www.linkedin.com/in/aliciafoureaux/" target="_blank" className="underline">LinkedIn</a></li>
                   <li>L <a href="https://github.com/allyfx" target="_blank" className="underline">GitHub</a></li>
