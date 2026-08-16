@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { typewriteText } from "@/utils/typewrite-text";
 import { motion } from "motion/react";
 import { typewriteContent } from "@/utils/typewrite-content";
+import Link from "next/link";
 
 const SKILLS = ["Leadership", "React", "React Native", "TypeScript", "Expo", "NextJS"]
 
@@ -140,6 +141,18 @@ export default function Home() {
               className="mt-8">
                 <h1 className="text-xl md:text-2xl font-bold">Personal Projects</h1>
                 <ul className="text-base md:text-xl ml-12 mt-2 space-y-8">
+                  <li className="space-x-3 flex flex-row gap-3 items-start">
+                    L 
+                    <div>
+                      <Link href="/blog" target="_blank" rel="noopener noreferrer" className="underline font-bold">
+                        My Blog
+                      </Link>
+                      <div className="mt-2">
+                        I share my experiences, stories, interest and mostly my brain in short posts.
+                      </div>
+                    </div>
+                  </li>
+
                   <li className="space-x-3 flex flex-row gap-3 items-start">
                     L 
                     <div>

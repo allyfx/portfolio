@@ -14,8 +14,8 @@ export async function generateMetadata(
 
   if (!post) {
     return {
-      title: "Alicia Foureaux | Tech Lead",
-      description: "Tech Lead and Senior Software Engineer especialized in solving problems.",
+      title: 'Alícia Foureaux - Blog',
+      description: 'Sharing stories, learnings and experiences that I gained throughout my career.',
     }
   }
  

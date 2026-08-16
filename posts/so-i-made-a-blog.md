@@ -1,9 +1,10 @@
 ---
-title: So, I Made A Blog
-date: 2026-08-15
-category: Writing, Blog
-short: I guess the millions of side projects I already have weren't enough; I needed another one.
+title: 'So, I Made A Blog'
+date: '2026-08-15'
+category: 'Writing, Blog'
+short: "I guess the millions of side projects I already have weren't enough; I needed another one."
 ---
+
 I've always enjoyed writing. I've always enjoyed putting my thoughts and ideas on paper. My phone's Notes app proves it.
 
 For a while, I focused my writing on weekly LinkedIn posts. Some posts got a little famous in terms of likes and views, but what I really enjoyed was how it sparked incredible conversations in the comments, and how much I learned just from reading other people's opinions on a certain topic. Unfortunately, work got in the way, and I stopped doing these weekly posts.
