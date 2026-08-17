@@ -36,7 +36,7 @@ export function PostPage({postData}: { postData: PostData | null }) {
           {postData.date} - by <Link href="/" className="underline cursor-pointer">Alícia Foureaux</Link>
         </p>
 
-        <div className="mt-8 mb-16 light:prose lg:prose-xl prose-code:font-sans prose-code:bg-gray-800 prose-code:px-2 prose-code:rounded-md" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="mt-8 mb-16 light:prose lg:prose-xl prose-code:font-sans prose-code:bg-gray-800 prose-code:px-2 prose-code:rounded-md space-y-4" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
         <footer className="border-t-2 border-amber-50 w-full pt-4">
           <p className="text-base md:text-xl">Liked the post? Let me know your thoughts:</p>
