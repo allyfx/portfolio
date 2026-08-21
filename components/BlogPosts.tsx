@@ -5,6 +5,7 @@ import { PostMetadata } from "@/utils/posts"
 import { typewriteText } from "@/utils/typewrite-text";
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
+import { SubscribeSection } from "./SubscribeSection";
 
 interface Props {
   posts: PostMetadata[]
@@ -12,7 +13,9 @@ interface Props {
 
 export function BlogPosts({ posts }: Props) {
   const [finishedTitleAnimation, setFinishedTitleAnimation] = useState(false);
+  
   const [search, setSearch] = useState('');
+
   const router = useRouter()
 
   function navigateToPost(id: string) {
@@ -46,6 +49,14 @@ export function BlogPosts({ posts }: Props) {
               className="text-lg md:text-2xl break-normal mt-3">
               Sharing stories, learnings and experiences that I gained throughout my career.
             </motion.p>
+
+            <motion.section
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.6, ease: "easeInOut" }}>
+              
+              <SubscribeSection />
+            </motion.section>
             
             <motion.section
               initial={{ y: 10, opacity: 0 }}

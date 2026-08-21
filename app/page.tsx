@@ -82,7 +82,7 @@ export default function Home() {
                   <li className="space-x-3 flex flex-row gap-3 items-start">
                     L
                     <div>
-                      <strong>Team Lead at ## </strong>
+                      <strong>Team Lead at G2i </strong>
                       <small>(Dec/25 - Present)</small>
 
                       <div className="mt-2">

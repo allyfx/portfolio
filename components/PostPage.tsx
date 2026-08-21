@@ -2,6 +2,7 @@
 import { PostData } from "@/utils/posts";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { SubscribeSection } from "./SubscribeSection";
 
 export function PostPage({postData}: { postData: PostData | null }) {
   const router = useRouter()
@@ -48,6 +49,8 @@ export function PostPage({postData}: { postData: PostData | null }) {
           </ul>
 
           <Link className="text-base md:text-xl underline hover:font-bold" href="/blog">Want to read more? Check out the <strong>blog!</strong></Link>
+
+          <SubscribeSection />
         </footer>
       </main>
     </div>
