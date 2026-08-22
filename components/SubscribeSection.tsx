@@ -15,7 +15,7 @@ export function SubscribeSection() {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, firstName: name }),
       });
 
       const data = await response.json();
