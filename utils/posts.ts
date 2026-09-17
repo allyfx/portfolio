@@ -10,6 +10,7 @@ export interface PostMetadata {
   date: string
   category: string
   short: string
+  description?: string
 }
 
 export interface PostData extends PostMetadata {

@@ -37,7 +37,7 @@ export function PostPage({postData}: { postData: PostData | null }) {
           {postData.date} - by <Link href="/" className="underline cursor-pointer">Alícia Foureaux</Link>
         </p>
 
-        <div className="mt-8 mb-16 light:prose lg:prose-xl prose-code:font-sans prose-code:bg-gray-800 prose-code:px-2 prose-code:rounded-md space-y-4" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="mt-8 mb-16 prose-blockquote:font-serif light:prose lg:prose-xl prose-code:font-sans prose-h4:text-2xl prose-code:bg-gray-800 prose-code:px-2 prose-code:rounded-md space-y-4" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
         <footer className="border-t-2 border-amber-50 w-full pt-4">
           <p className="text-base md:text-xl">Liked the post? Let me know your thoughts:</p>
@@ -48,9 +48,9 @@ export function PostPage({postData}: { postData: PostData | null }) {
             <li>L Email: ally@foureauxcode.com</li>
           </ul>
 
-          <Link className="text-base md:text-xl underline hover:font-bold" href="/blog">Want to read more? Check out the <strong>blog!</strong></Link>
-
           <SubscribeSection />
+
+          <Link className="text-base md:text-xl underline hover:font-bold" href="/blog">Want to read more? Check out the <strong>blog!</strong></Link>
         </footer>
       </main>
     </div>

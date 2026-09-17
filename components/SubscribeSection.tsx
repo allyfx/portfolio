@@ -5,6 +5,7 @@ const SUBSCRIBED_KEY = "blog:subscribed"
 export function SubscribeSection() {
   const [isSubOpen, setIsSubOpen] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
+  const [justSubscribed, setJustSubscribed] = useState(false);
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -26,6 +27,7 @@ export function SubscribeSection() {
       } else {
         localStorage.setItem(SUBSCRIBED_KEY, "true")
         setSubscribed(true)
+        setJustSubscribed(true)
       }
 
       setIsSubOpen(false)
@@ -39,12 +41,15 @@ export function SubscribeSection() {
   }, []);
 
   return (
-    <>
-      <button className="cursor-pointer mt-4" onClick={() => setIsSubOpen(!isSubOpen)}>
-        {!subscribed ? (
-          <>Hey! Want to get notified for new posts? <span className="underline">Subscribe</span></>
-        ) : "Welcome to the subscription list! I'll email you when I post something new."}
-      </button>
+    <div className="my-6">
+      {subscribed ?
+        (justSubscribed ? "Welcome to the subscription list! I'll email you when I post something new."
+          : "Thank you for being a part of the subscription list <3")
+      : (
+        <button className="cursor-pointer mt-4" onClick={() => setIsSubOpen(!isSubOpen)}>
+          Hey! Want to get notified for new posts? <span className="underline">Subscribe</span>
+        </button>
+      )}
 
       {isSubOpen && (
         <section className="mt-2 border-b-2 pb-5">
@@ -73,6 +78,6 @@ export function SubscribeSection() {
           {!!result && <p>{result}</p>}
         </section>
       )}
-    </>
+    </div>
   )
 }

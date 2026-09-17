@@ -7,8 +7,7 @@ interface Props {
 }
 
 export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
+  { params }: Props
 ): Promise<Metadata> {
   const post = await getPostData((await params).postid)
 
@@ -21,7 +20,7 @@ export async function generateMetadata(
  
   return {
     title: post.title,
-    description: post.short,
+    description: post.description || post.short,
     authors: [{name: "Alícia Foureaux", url: "https://allyfx.dev"}]
   }
 }
