@@ -63,7 +63,7 @@ export default function Home() {
               className="mt-8">
                 <h1 className="text-xl md:text-2xl font-bold">Who am I?</h1>
                 <ul className="text-base md:text-xl ml-12 mt-2 space-y-2">
-                  <li>L Over 5 years of experience building software</li>
+                  <li>L Over 6 years of experience building software</li>
                   <li>L Thrive at solving problems, no matter the tools</li>
                   <li>L Leadership focused on leading, not bossing</li>
                   <li>L Known for having way too many hobbies</li>
@@ -81,12 +81,25 @@ export default function Home() {
                 <ul className="text-base md:text-xl ml-12 mt-2 space-y-8">
                   <li className="space-x-3 flex flex-row gap-3 items-start">
                     L
-                    <div>
-                      <strong>Team Lead at G2i </strong>
-                      <small>(Dec/25 - Present)</small>
+                    <div className="space-x-3 flex flex-col gap-3">
+                      <div>
+                        <strong>Senior Software Engineer at G2i </strong>
+                        <small>(Sep/26 - Present)</small>
 
-                      <div className="mt-2">
-                        Leading a team of 12–30 engineers to build amazing projects, my main responsibility is to provide technical guidance, report on project status, organize the work to be done, and code alongside the engineers.
+                        <div className="mt-2">
+                          For my great work in automating processes while I was a Team Lead, I got promoted to an internal G2i Senior Software Engineer, now working on projects that facilitate G2i employees' daily work by automating their processes.
+                        </div>
+                      </div>
+                      
+                      <span className="font-bold">|</span>
+
+                      <div>
+                        <strong>Team Lead at G2i </strong>
+                        <small>(Dec/25 - Sep/26)</small>
+
+                        <div className="mt-2">
+                          Leading a team of 12–30 engineers to build amazing projects, my main responsibility is to provide technical guidance, report on project status, organize the work to be done, and code alongside the engineers.
+                        </div>
                       </div>
                     </div>
                   </li>
